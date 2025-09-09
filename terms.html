@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Snippet</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="sticky-notes.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        *::selection {
+            background-color: #d80000;
+            color: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+            color: white;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body::-webkit-scrollbar {
+            display: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 40px 0;
+        }
+
+        .logo {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ffffff, #cccccc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            font-weight: 300;
+        }
+
+        .content-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .content-section:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .content-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ffffff, #cccccc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .content-text {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .content-subtitle {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .footer {
+            margin-top: 80px;
+            background: rgba(0, 0, 0, 0.8);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px 40px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .footer-section {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-title {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ffffff, #cccccc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .footer-subtitle {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .footer-description {
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1rem;
+        }
+
+        .footer-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-list li {
+            padding: 8px 0;
+            color: rgba(255, 255, 255, 0.7);
+            transition: color 0.3s ease;
+        }
+
+        .footer-list li:hover {
+            color: #ffffff;
+        }
+
+        .footer-list li i {
+            margin-right: 10px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .footer-bottom-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 25px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.6);
+            margin: 0;
+        }
+
+        .footer-bottom .fas.fa-heart {
+            color: #ff4444;
+            animation: pulse 2s infinite;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .footer-link:hover {
+            color: #ffffff;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .logo {
+                font-size: 2.5rem;
+            }
+
+            .content-section {
+                padding: 30px 20px;
+            }
+
+            .content-title {
+                font-size: 2rem;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                padding: 40px 20px 30px;
+                text-align: center;
+            }
+
+            .footer-bottom-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+
+            .footer-links {
+                justify-content: center;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header" data-aos="fade-down">
+            <a href="index.html" style="text-decoration: none; color: #cccccc;">
+                <h1 class="logo pulse">Snippet</h1>
+            </a>
+            <p class="tagline">Your digital notebook for brilliant ideas</p>
+        </header>
+
+        <!-- Terms of Service Content -->
+        <section class="content-section" data-aos="fade-up">
+            <h2 class="content-title">Terms of Service</h2>
+
+            <div class="content-text">
+                <p>Welcome to Snippet! These Terms of Service ("Terms") govern your use of our notes application. By
+                    using Snippet, you agree to these Terms. If you do not agree, please do not use the application.</p>
+            </div>
+
+            <h3 class="content-subtitle">Acceptance of Terms</h3>
+            <div class="content-text">
+                <p>By accessing and using Snippet, you accept and agree to be bound by the terms and provision of this
+                    agreement. These Terms apply to all users of the application.</p>
+            </div>
+
+            <h3 class="content-subtitle">Use License</h3>
+            <div class="content-text">
+                <p>Permission is granted to temporarily use Snippet for personal, non-commercial transitory viewing
+                    only. This is the grant of a license, not a transfer of title, and under this license you may not:
+                </p>
+                <ul>
+                    <li>Modify or copy the application materials</li>
+                    <li>Use the materials for any commercial purpose or for any public display</li>
+                    <li>Attempt to decompile or reverse engineer any software contained in Snippet</li>
+                    <li>Remove any copyright or other proprietary notations from the materials</li>
+                </ul>
+            </div>
+
+            <h3 class="content-subtitle">User Responsibilities</h3>
+            <div class="content-text">
+                <p>As a user of Snippet, you are responsible for:</p>
+                <ul>
+                    <li>Maintaining the confidentiality of your device and browser</li>
+                    <li>All activities that occur under your use of the application</li>
+                    <li>Ensuring your notes comply with applicable laws and regulations</li>
+                    <li>Backing up your important notes regularly</li>
+                </ul>
+            </div>
+
+            <h3 class="content-subtitle">Data Storage and Privacy</h3>
+            <div class="content-text">
+                <p>Snippet stores all notes locally on your device using browser local storage. We do not collect,
+                    store, or transmit your personal data. Please refer to our <a href="privacy.html"
+                        style="color: #ffffff; text-decoration: underline;">Privacy Policy</a> for more details.</p>
+            </div>
+
+            <h3 class="content-subtitle">Disclaimer</h3>
+            <div class="content-text">
+                <p>The materials on Snippet are provided on an 'as is' basis. Snippet makes no warranties, expressed or
+                    implied, and hereby disclaims and negates all other warranties including without limitation, implied
+                    warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement
+                    of intellectual property or other violation of rights.</p>
+            </div>
+
+            <h3 class="content-subtitle">Limitations</h3>
+            <div class="content-text">
+                <p>In no event shall Snippet or its suppliers be liable for any damages (including, without limitation,
+                    damages for loss of data or profit, or due to business interruption) arising out of the use or
+                    inability to use Snippet, even if Snippet or a Snippet authorized representative has been notified
+                    orally or in writing of the possibility of such damage.</p>
+            </div>
+
+            <h3 class="content-subtitle">Accuracy of Materials</h3>
+            <div class="content-text">
+                <p>The materials appearing in Snippet could include technical, typographical, or photographic errors.
+                    Snippet does not warrant that any of the materials on its application are accurate, complete, or
+                    current. Snippet may make changes to the materials contained in its application at any time without
+                    notice.</p>
+            </div>
+
+            <h3 class="content-subtitle">Modifications</h3>
+            <div class="content-text">
+                <p>Snippet may revise these Terms of Service at any time without notice. By using Snippet, you are
+                    agreeing to be bound by the then current version of these Terms of Service.</p>
+            </div>
+
+            <h3 class="content-subtitle">Governing Law</h3>
+            <div class="content-text">
+                <p>These terms and conditions are governed by and construed in accordance with the laws of your
+                    jurisdiction, and you irrevocably submit to the exclusive jurisdiction of the courts in that state
+                    or location.</p>
+            </div>
+
+            <h3 class="content-subtitle">Contact Information</h3>
+            <div class="content-text">
+                <p>If you have any questions about these Terms of Service, please visit our <a href="support.html"
+                        style="color: #ffffff; text-decoration: underline;">Support</a> page.</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" data-aos="fade-up">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Snippet</h3>
+                <p class="footer-description">
+                    Your digital notebook for capturing brilliant ideas, thoughts, and inspirations.
+                    Simple, elegant, and always accessible.
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-subtitle">Features</h4>
+                <ul class="footer-list">
+                    <li><i class="fas fa-check"></i> Create & Edit Notes</li>
+                    <li><i class="fas fa-check"></i> Search Functionality</li>
+                    <li><i class="fas fa-check"></i> Local Storage</li>
+                    <li><i class="fas fa-check"></i> Responsive Design</li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4 class="footer-subtitle">Legal</h4>
+                <ul class="footer-list">
+                    <li><a href="privacy.html" class="footer-link" style="color: inherit; text-decoration: none;"><i
+                                class="fas fa-shield-alt"></i> Privacy Policy</a></li>
+                    <li><a href="terms.html" class="footer-link" style="color: inherit; text-decoration: none;"><i
+                                class="fas fa-file-contract"></i> Terms of Service</a></li>
+                    <li><a href="support.html" class="footer-link" style="color: inherit; text-decoration: none;"><i
+                                class="fas fa-life-ring"></i> Support</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-content">
+                <p>&copy; 2025 Snippet. Crafted with ❤︎ By <a href="https://royz-portfolio.netlify.app/"
+                        style="color: #ffffff; font-size: 1.1em; font-weight: bold; font-style: italic;" target="_blank"
+                        title="admin website">This Guy</a>.</p>
+                <div class="footer-links">
+                    <a href="privacy.html" class="footer-link">Privacy</a>
+                    <a href="terms.html" class="footer-link">Terms</a>
+                    <a href="support.html" class="footer-link">Support</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+
+</html>
